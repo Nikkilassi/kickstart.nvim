@@ -77,6 +77,6 @@ return {
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
     -- Install Python specific config
-    require('dap-python').setup 'C:/Users/nikla/AppData/Local/nvim-data/mason/packages/debugpy/venv/Scripts/dap_python.exe'
+    require('dap-python').setup 'C:/Users/nikla/AppData/Local/nvim-data/mason/packages/debugpy/venv/Scripts/python.exe'
   end,
 }
