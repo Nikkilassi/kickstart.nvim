@@ -12,10 +12,16 @@ return {
     vim.keymap.set('n', '/', ':Neotree toggle current reveal_force_cwd<cr>', { desc = 'Show cwd in new window' })
     vim.keymap.set('n', '|', ':Neotree reveal<cr>', { desc = 'Open file tree' })
     vim.keymap.set('n', '<leader>tb', ':Neotree toggle show buffers right<cr>', { desc = '[T]oggle [B]uffers' })
-    vim.keymap.set('n', '<leader>gs', ':Neotree float git_status<cr>', { desc = 'Open [G]it [S]tatus' })
+    vim.keymap.set('n', '<leader>tds', ':Neotree document_symbols<cr>', { desc = 'Open [T]ree for [D]ocument [S]ymbols' })
 
     -- config
     require('neo-tree').setup {
+      sources = {
+        'filesystem',
+        'buffers',
+        'git_status',
+        'document_symbols',
+      },
       close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
       enable_cursor_hijack = true, -- If enabled neotree will keep the cursor on the first letter of the filename when moving in the tree.
       filtered_items = {
