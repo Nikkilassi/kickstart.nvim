@@ -9,7 +9,6 @@ return {
   },
   config = function()
     -- keymaps
-    vim.keymap.set('n', '/', ':Neotree toggle current reveal_force_cwd<cr>', { desc = 'Show cwd in new window' })
     vim.keymap.set('n', '|', ':Neotree reveal<cr>', { desc = 'Open file tree' })
     vim.keymap.set('n', '<leader>tb', ':Neotree toggle show buffers right<cr>', { desc = '[T]oggle [B]uffers' })
     vim.keymap.set('n', '<leader>tds', ':Neotree document_symbols<cr>', { desc = 'Open [T]ree for [D]ocument [S]ymbols' })
